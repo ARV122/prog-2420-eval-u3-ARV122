@@ -1,0 +1,89 @@
+El nombre del programa es Inventrack 
+
+ Yo decidi elegir este problema ya que me parece interesante como se puede llevar un mejor manejo en las tiendas debido a que se maneja una gran cantidad de productos 
+ y llevar un conteo manualmente de cada uno me parece que se hace complejo para la pesona que está ocupando el puesto y para la empresa o tienda seria 
+ un poco riesgoso 
+
+
+ Utilizar este codigo tiene una gran importancia debido a que le podremos dar un mejor manejo a cada producto de la tienda para lograr asi identificar
+ que de podemos reabastecer o de que producto tenemos una mayor saturación lo cual nos indique que debemos agotar dicho producto. Con esto no solo 
+ podremos hacer lo anteiormente mencionado, tambien podremos llevar una mejor organizacion en dicha tienda para cuando sea solicitado algun 
+ informe general del mes poderlo tener disponible a la mano
+
+En este programa las funcionalidades que tendra sera que podra agregar productos, eliminar productos, actualizar productos, mostar inventario, buscar productos 
+
+Se dara uso de estructura de datos como las siguientes las cuales son como el Def para asi definir las funciones, el uso del input que este nos ayuda a solicitar la informacion 
+al usuario, tambien el uso del int que la informacion que se solicite sea en entero, el float que nos facilitara representar un numero positivo o negativo, el if y el else que 
+lo que hacen es ejecutar tanto la parte verdadera como la falsa de una condición, el bucle for lo que nos podra ayudar para iterar sobre un objeto iterable y ejecutar un bloque 
+de codigo y el while true lo que hara es que ejecutara un bloque de codigo mientras la condición sea verdadera 
+
+
+INICIAR programa
+
+INICIALIZAR inventario como un diccionario vacío
+
+FUNCION agregar_producto():
+    LEER código
+    LEER nombre
+    LEER cantidad
+    LEER precio
+    AGREGAR al inventario con el código como clave y los detalles del producto como valores
+    IMPRIMIR "Producto añadido exitosamente"
+
+FUNCION eliminar_producto():
+    LEER código
+    SI código existe en el inventario:
+        ELIMINAR producto del inventario
+        IMPRIMIR "Producto eliminado"
+    SI NO:
+        IMPRIMIR "Producto no encontrado"
+
+FUNCION actualizar_producto():
+    LEER código
+    SI código existe en el inventario:
+        LEER nueva cantidad
+        LEER nuevo precio
+        ACTUALIZAR inventario con la nueva cantidad y precio
+        IMPRIMIR "Producto actualizado"
+    SI NO:
+        IMPRIMIR "Producto no encontrado"
+
+FUNCION mostrar_inventario():
+    SI inventario no está vacío:
+        IMPRIMIR cada producto con sus detalles
+    SI NO:
+        IMPRIMIR "El inventario está vacío"
+
+FUNCION buscar_producto():
+    LEER código
+    SI código existe en el inventario:
+        IMPRIMIR detalles del producto
+    SI NO:
+        IMPRIMIR "Producto no encontrado"
+
+FUNCION menu():
+    MIENTRAS True:
+        MOSTRAR opciones:
+            1. Agregar producto
+            2. Eliminar producto
+            3. Actualizar producto
+            4. Mostrar inventario
+            5. Buscar producto
+            6. Salir
+        LEER opción
+        SI opción es 1:
+            LLAMAR a agregar_producto()
+        SI opción es 2:
+            LLAMAR a eliminar_producto()
+        SI opción es 3:
+            LLAMAR a actualizar_producto()
+        SI opción es 4:
+            LLAMAR a mostrar_inventario()
+        SI opción es 5:
+            LLAMAR a buscar_producto()
+        SI opción es 6:
+            IMPRIMIR "Saliendo..."
+            TERMINAR ciclo
+
+EJECUTAR menu()
+FIN del programa
